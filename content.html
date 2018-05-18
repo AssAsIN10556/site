@@ -1,0 +1,47 @@
+<html>
+    <head><link rel="icon" href="website_icon.ico"></head>
+    <title>Julien Peeters</title>
+    <style type="text/css">
+        body    {
+            background-image: url(images/enviroment1.png);
+            background-size: cover;
+            background-position: top;
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 80px auto;
+        }
+        p   {
+            color: white;
+            font-family: bahnschrift;
+            margin: -67 0 0 80;
+        }
+        .header {
+            grid-area: 1 / 1 / 1 / span 2;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 1;
+            box-shadow: 0 0 15px black;
+        }
+        #pfp    {
+            width: 60px;
+            height: 60px;
+            margin: 10px;
+            border-radius: 30px;
+        }
+        .content    {
+            grid-area: 2 / 1 / span 1 / span 2;
+            background-color: rgba(255, 255, 255, 0.7);
+            z-index: 0;
+        }
+    </style>
+    <body>
+        <div class="header">
+            <img id="pfp" src="images/untitled.png">
+            <p style="font-size: 24;">Julien Peeters</p>
+            <p style="margin: 0 0 0 80">3D concept artist</p>
+        </div>
+        <div class="content"></div>
+    </body>
+</html>
