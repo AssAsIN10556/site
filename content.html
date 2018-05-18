@@ -11,17 +11,29 @@
             margin: 0;
             display: grid;
             grid-template-columns: 1fr 1fr;
-            grid-template-rows: 80px auto;
+            grid-template-rows: 80px 80px 1fr;
         }
         p   {
             color: white;
             font-family: bahnschrift;
             margin: -67 0 0 80;
         }
+        h1  {
+            color: black;
+            font-family: bahnschrift;
+            width: 50%;
+            font-size: 45;
+            line-height: 50%;
+        }
+        img {
+            width: 100%;
+            margin: 0 0 10px 0;
+            border-radius: 5px;
+        }
         .header {
             grid-area: 1 / 1 / 1 / span 2;
             background-color: rgba(0, 0, 0, 0.8);
-            z-index: 1;
+            z-index: 2;
             box-shadow: 0 0 15px black;
         }
         #pfp    {
@@ -31,9 +43,33 @@
             border-radius: 30px;
         }
         .content    {
-            grid-area: 2 / 1 / span 1 / span 2;
+            grid-area: 3 / 1 / span 1 / span 2;
             background-color: rgba(255, 255, 255, 0.7);
             z-index: 0;
+            padding: 20px;
+            padding-bottom: 5px;
+            box-sizing: border-box;
+            overflow: scroll;
+            overflow-x: hidden;
+        }
+        .top    {
+            display: flex;
+            position: fixed;
+            text-align: center;
+            width: 100%;
+            height: 80px;
+            margin-top: 80px;
+            z-index: 1;
+            background-color: rgba(255, 255, 255, 0.7);
+            border-bottom: 3px solid black;
+        }
+        #left   {
+            float: left;
+            width: calc(50% - 10px);
+        }
+        #right  {
+            float: right;
+            width: calc(50% - 10px);
         }
     </style>
     <body>
@@ -42,6 +78,22 @@
             <p style="font-size: 24;">Julien Peeters</p>
             <p style="margin: 0 0 0 80">3D concept artist</p>
         </div>
-        <div class="content"></div>
+        <div class="top"><h1>3D</h1><h1>2D</h1></div>
+        <div class="content">
+            <div id="left">
+                <img src="images/Astro_head_Tangent-shading.png">
+                <img src="images/PROGRESS.png">
+                <img src="images/falling.gif">
+                <img src="images/shrug_astro.png">
+                <img src="images/untitled.png">
+            </div>
+            <div id="right">
+                <img src="images/enviroment1.png">
+                <img src="images/overlord.jpg">
+                <img src="images/week1robotorganichead.png">
+                <img src="images/SKETCH.jpg">
+                <img src="images/sketch2.jpg">
+            </div>
+        </div>
     </body>
 </html>
